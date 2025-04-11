@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03_for연습.html</title>
+
+<script type="text/javascript">
+
+document.write('<table border="2">');
+	
+	var count =1;
+	for (let i = 0; i < 5; i++){
+		document.write('<tr>');
+	
+		
+	    	for (let j = 0; j < 5; j++) {
+			//document.write('<td>'+count+'</td>');
+			/* const message2 = '내 이름은 ${myname} 입니다. 나이는 ${myage}입니다.';
+			document.write(message+'<br/>'); */
+	        document.write(`<td>${count}</td>`);
+			count++;
+			//data++;  // 얘가 증가함수
+			}
+		
+	document.write('</tr>');
+	}
+	
+document.write('</table>');
+
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

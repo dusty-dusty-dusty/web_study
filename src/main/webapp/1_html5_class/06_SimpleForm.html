@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06_SimpleForm.html</title>
+</head>
+<body>
+<!-- 
+	form : 폼태그 안에서 사용자 입력값과 선택값을 서버로 전송하는 역할
+	
+		'submit 버튼 : 서버로 전송
+		
+		'각 엘리먼트의 값을 서버로 전송하려면 name 속성이 필요합니다.
+ -->
+
+<form action="xxxxxx.jsp">
+	<fieldset>
+	<legend>회원가입</legend>
+	<ol>
+		<li>
+			<lable for='irum'>이름</lable>
+			<input id='irum' name='irum' type='text'/> 
+		</li>
+
+		<li>
+			<lable for='gender'>성별</lable>
+			<input type='radio' value='male' id='gender' name='gender' checked/> 남자
+			<input type='radio' value='female' id='gender' name='gender'/> 여자
+		</li>
+		
+		<li>
+		
+			<label for='job'>직업</label>
+			<select id='job' name='job'>
+				<option value='개발자'>개발자</option>
+				<option value='프로그래머'>프로그래머</option>
+				<option value='노가다'>노가다</option>
+			</select>
+		</li>
+		
+		<li>
+			<label for='tour'>여행하고 싶은 나라</label>
+			<input id='tour' type='text' list='countries' name='countries'/>
+			<datalist id='countries'>
+				<option>가나</option>
+				<option>스위스</option>
+				<option>미국</option>
+			</datalist>
+		</li>
+		
+		
+		
+		
+		<li>
+			<label for='hobby'>취미</label>
+			<input type='checkbox' value='sleep' id='hobby' name='hobby' checked/> 잠자기
+			<input type='checkbox' value='eat' id='hobby' name='hobby' /> 먹기
+			<input type='checkbox' value='soom' id='hobby' name='hobby'/> 숨쉬기
+			<input type='checkbox' value='mung' id='hobby' name='hobby'/> 멍때리기
+		</li>
+		
+		
+		<li>
+			<label for='love'>애인</label>
+			<input type='radio' value='YES' id='love' name='love'/> 있어
+			<input type='radio' value='No' id='love' name='love'/> 없어
+		</li>
+		
+		
+		
+		
+		
+		
+		
+		<li>
+			<input type='submit' value='확인'>
+			<input type='reset' value='취소'>
+		</li>
+	</ol>
+	</fieldset>
+</form>
+
+</body>
+</html>

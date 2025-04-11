@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>9참고</title>
+
+<script type="text/javascript">
+
+window.onload=function(){
+	var items = document.querySelectorAll('#list > li');
+	
+	//var, let 변수의 범위가 달라용
+	for(let i=0; i<items.length; i++){
+		items[i].onclick = function(){
+			//alert(items[i].innerHTML);
+			//alert(this.innerHTML)
+			//alert(i);
+			//alert(this.innerHTML +"/"+  this.getAttribute('price'));
+			alert(this.getAttribute('price'));
+			//getAttribute 속성 값 얻어오기
+		}
+	}
+}
+
+</script>
+
+</head>
+<body>
+	<h2 id='btn'>프로그래밍</h2>
+	<ul id='list'>
+		<li price='100'>HTML</li>
+		<li price='200'>CSS</li>
+		<li price='300'>JS</li>
+	</ul>
+</body>
+</html>

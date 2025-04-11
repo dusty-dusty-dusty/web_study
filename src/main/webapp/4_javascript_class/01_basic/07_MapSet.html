@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Map / Set 내장 객체 </title>
+<script type="text/javascript">
+
+// 1. Map : 키와 값으로 관리하는 객체
+let m = new Map();
+m.set('java','1111');
+m.set('script','2222');
+m.set('nodejs', '2222');
+m.set('java','3333');
+
+/* for(let item in m){
+	document.write(item+'<br/>')
+} */
+
+
+/* for(let item of m){
+	document.write(item[0]+":"+item[1]+'<br/>')
+}
+
+//나눠져서 쓰는게 요즘 스타일이다.
+for(let [k,v] of m){
+	document.write(k+":"+v+'<br/>')
+} */
+ 
+//[연습] 로그인 확인 처리한다고 가정 
+let inputId = 'script';
+let inputPw = '3333';
+
+//아이디와 패스워드가 동일하면 '로그인 성공' 그렇지 않으면 '로그인 실패'
+
+//로그인 성공 여부를  저장할 수 있는 변수 생성(초기값: 실패 상태)
+let flag = false;
+//Map을 반복하면서 아이디와 비밀번호 확인 
+/* for(let [id, pw] of m){ 
+	 if( id === inputId && pw === inputPw){ 
+		 //둘 다 맞으면 성공
+		 document.write('<h1>성공</h1>');
+		 //로그인 성공 상태로 변경
+		 flag = true;
+		 //더이상 반복할게 없으니 브레잌
+		 break;
+	 }
+ }
+ //반복이 끝난 후에도 flag가 false면 로그인 실패
+ if (!flag) {
+	 document.write('<h1>로그인실패</h1>')
+ }
+  */
+//-------------------------------------------------------
+// 2. Set  : 중복 값을 허용하지 않는 집합 관리 객체
+/* let s = new Set();
+s.add('tiger');
+s.add('dog');
+s.add('lion');
+s.add('dog');
+
+for(let item of s){
+	document.write(item+'<br/>')
+} */
+
+let lotto = new Set();
+while (lotto.size<6){
+	lotto.add( parseInt (Math.random()*45)+1 );
+}
+for(let item of lotto){
+	document.write(item+'/')
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

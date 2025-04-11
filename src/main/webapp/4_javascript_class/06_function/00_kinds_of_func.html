@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 함수 3가지</title>
+	<script>
+/* 	// 1. function 명령(선언)
+	function triangle(base, height){
+		return base*height/2;
+	}
+	document.write('1. 삼각형의 면적'+ triangle(3,4)+ '<hr/>');
+	
+	// 2. 함수리터럴   * 리터럴 : 변수의 값=> 함수도 변수의 값
+	var triangle = function(base,height){
+						return base*height/2;
+					};
+	document.write('2. 삼각형의 면적'+ triangle(3,4)+ '<hr/>');
+
+	// 3. 애로우함수
+	var triangle = (base,height) => {
+						return base*height/2;
+					}
+	document.write('3. 삼각형의 면적'+ triangle(3,4)+ '<hr/>'); */
+	
+	//[참고] arrow function
+	//[1번 방식]
+	/* function func(x){
+		return x*2;
+	} */
+	//[2번 방식]
+	/* let func = function(x){
+					return x*2;
+				} */
+	//[3번 방식]
+	//var func = (x) => {	return x*2 } 
+	//var func = x => {	return x*2 } //인자가 1개인 경우 소괄호 생략 가능
+	let func = x => x*2; //함수 안에 return문장만 있는경우 생략가능
+	
+					
+					
+	document.write('결과:'+func(10));
+	
+	</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>

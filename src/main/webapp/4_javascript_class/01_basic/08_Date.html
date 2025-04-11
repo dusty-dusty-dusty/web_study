@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<script type="text/javascript">	
+ 	
+	/* //var d = new Date('2025/4/10');
+	var d = new Date();
+	d.setFullYear(2030); 
+	//연도값 가져오기
+	// 12월 25일 지정
+	d.setMonth(11);
+	d.setDate(25);
+	
+	document.writeln( d  + '<br/>');
+	document.writeln( d.getYear()  + '<br/>');
+	document.writeln( d.getFullYear()  + '<br/>');//연도 뽑아낼려면 fullyear을 써야함
+	document.writeln( d.getMonth()+1  + '<br/>');//세는 방식이 서양방식이라 3이 나오는거임
+	document.writeln( d.getDate()  + '<br/>');
+	document.writeln( d.getDay()  + '<br/>');
+
+	document.writeln( d.toLocaleString()  + '<br/>');
+	document.writeln( d.toGMTString()  + '<br/>');
+	document.writeln( d.toDateString()  + '<br/>');
+ */	
+	
+ 	/* //날짜형 계산
+ 	var today = new Date();
+ 	// 10일 뒤의 날짜는
+ 	today.setDate(today.getDate()+10);
+ 	document.write(today.toLocaleString()+'<br/>')
+ 	
+ 	//20일전  날짜?
+ 	var today = new Date();
+ 	today.setDate(today.getDate()-20);
+ 	document.write(today.toLocaleString()+'<br/>')
+ 			
+ 	//3개월 후 날짜
+ 	var today = new Date();
+	today.setMonth(today.getMonth()+3);
+ 	document.write(today.toLocaleString()+'<br/>') */
+ 	
+/*  	const onul = new Date(); //2025-04-08
+ 	onul.setDate(0); //전달의마지막날
+ 	document.write(onul.getDate()+'</br>');  */
+ 	
+ 	//이번달의 마지막 날짜는?
+/*  	const onul = new Date(); //2025-04-08
+ 	onul.setDate(0-'1'); //전달의마지막날
+ 	document.write(onul.getDate()+'</br>'); */
+ 	
+ 	
+ 	//날짜비교
+ 	const date1 = new Date('2024-12-31');
+ 	const date2 = new Date('2025-01-01');
+ 	
+ 	document.write((date1 > date2)+'<br/>');
+ 	document.write((date1 >= date2)+'<br/>');
+ 	document.write((date1 < date2)+'<br/>');
+ 	document.write((date1 <= date2)+'<br/>');
+ 	
+ 	const date3 = new Date('2025-12-25');
+ 	const date4 = new Date('2025-12-25');
+ 	document.write((date3 == date4) + '<br/>') 
+ 	//주의 이거는 주솟값이 같은지 물어본것입니다~
+ 	document.write((date3.getTime() == date4.getTime()) + '<br/>')
+ 	//날짜가 같은지 물어보고싶으면 getTime
+ 	
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

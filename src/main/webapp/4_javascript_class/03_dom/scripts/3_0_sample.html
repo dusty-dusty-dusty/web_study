@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+window.onload = function(){
+	
+	var btn = document.getElementById('btn');
+	btn.onclick = function(){
+		// 1. 입력한 값들을 얻어온다.
+		// 2. 테이블요소 얻어온다.
+		// 3. tr 요소와 td 요소를 생성한다.
+		// 4. 텍스트노드(1번의 입력값)로 생성한다.
+		// 5. td 요소에 텍스트노드를 붙인다.
+		// 6. tr 요소에 생성한 td 요소를 붙인다.
+		// 7. 테이블요소에 tr요소를 붙인다.
+		var name = document.querySelector('#name').value;
+		var dept = document.querySelector('.dept').value;
+	
+		var tbl = document.querySelector("#tbl > tbody");
+		
+		var tr = document.createElement('tr');
+		var td1 = document.createElement('td');
+		var td2 = document.createElement('td');
+		
+		var txt1 = document.createTextNode(name);
+		var txt2 = document.createTextNode(dept);
+		
+		td1.appendChild(txt1);
+		td2.appendChild(txt2);
+		
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		
+		tbl.appendChild(tr);
+	}
+}
+</script>
+</head>
+<body>
+
+이름 <input type='text' id='name'><br/>
+부서 <input type='text' class='dept'><br/>
+<input id='btn' type='button' value='추가'>
+
+<hr/>
+<h2> 우리 직원 명단 </h2>
+<table id='tbl' border='2'>
+	<thead>
+		<tr>
+			<td> 이름 </td>
+			<td> 부서</td>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+</body>
+</html>

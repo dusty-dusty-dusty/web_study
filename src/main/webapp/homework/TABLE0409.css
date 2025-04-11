@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+table {
+	border : solid 3px black;
+}
+
+tbody td {
+	width : 100px;
+	height : 60px;
+	background : yellow;
+}
+
+td.first {
+	background : blue;
+}

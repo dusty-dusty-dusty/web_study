@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 처리 취소</title>
+
+<style type="text/css">
+	#inner {background : yellow;}
+	#outer {background : orange;}
+</style>
+
+
+<script>
+	/* 버블링 : 이벤트의 부모요소에 전달되는 단계
+	
+			- stopPropagation() : 이벤트 전달 취소
+			- preventDefault() : 이벤트 본래의 동작 취소
+	*/
+window.onload = function(){
+				
+	let inner= document.getElementById('inner');
+	inner.onclick=function(evt){
+		evt.stopPropagation();
+		evt.preventDefault();
+		alert('안쪽 영역 이벤트 발생');
+	}
+	
+	let outer= document.getElementById('outer');
+	outer.onclick=function(e){
+		alert('영역전개');
+	}
+}
+
+	
+	
+</script>
+</head>
+<body>
+	<div id='outer'>
+		<p>바깥 부분</p>
+		<div id='inner'>
+			<a href='http://www.nate.com'>안쪽부분</a>
+		</div>
+	</div>
+</body>
+</html>

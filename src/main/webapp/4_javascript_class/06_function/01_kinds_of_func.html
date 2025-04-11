@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 함수 만들기</title>
+	<script>
+	// 1. function 명령
+	function first(){
+		var txt = document.getElementById('first');
+		txt.style.color = 'yellow';
+		txt.style.backgroundColor = 'red';
+	}
+	
+	var second = function(second){
+					var txt = document.getElementById('second');
+					txt.style.color = 'yellow';
+					txt.style.backgroundColor = 'red';
+				}
+	
+	var third = (fourth) => {
+					var txt = document.getElementById('fourth');
+					txt.style.color = 'yellow';
+					txt.style.backgroundColor = 'red';
+				}
+	//var를 second랑 third로 하는이유 : 함수명이 없으니까 변수명이 함수명을 불러들인다고 생각하면된다. 온클릭명을 변수명으로 불러들임
+	
+	</script>
+</head>
+
+<body>
+	<p> <span id="first"> 1. function 명령 </span>
+		<input type="button" value="확인" onclick="javascript:first()"/>
+	</p>
+	<p> <span id="second"> 2. 함수 리터럴 </span>
+		<input type="button" value="확인" onclick="javascript:second()"/>
+	</p>
+	<p> <span id="fourth"> 3. 애로우 함수 </span>
+		<input type="button" value="확인" onclick="javascript:third()"/>
+	</p>
+</body>
+</html>

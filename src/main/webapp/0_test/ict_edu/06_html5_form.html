@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06_SimpleForm</title>
+
+<!-- 외부CSS 파일경로 -->
+<link href ='../../2_css_class/css/myform.css' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<body>
+<form action="xxxxxx.jsp">
+	<fieldset>
+	
+		<legend>로그인정보</legend>
+		<ol>
+			<li>
+				<lable for='id'>아이디</lable>
+				<input id='id' name='user_id' type='text'/> 
+			</li>
+			
+			<li>
+				<lable for='PW'>비밀번호</lable>
+				<input id='PW' name='PW' type='password'/> 
+			</li>
+			
+			<li>
+				<lable for='RPW'>비밀번호 확인</lable>
+				<input id='RPW' name='RPW' type='password'/> 
+			</li>
+			<li>
+				<lable for='grade'>회원등급</lable>
+				<input id='grade' name='grade' type='text' placeholder="준회원"/> 
+			</li>
+			
+		</ol>
+		
+	</fieldset>
+	
+	<fieldset>
+	
+		<legend>개인정보</legend>
+		<ol>
+			<li>
+				<lable for='irum'>이름</lable>
+				<input id='irum' name='irum' type='text' placeholder="5자미만 공백없이."/> 
+			</li>
+			
+			<li>
+				<lable for='email'>메일주소</lable>
+				<input id='email' name='email' type='text' placeholder="abcd@domain.com"/> 
+			</li>
+			
+			
+			<li>
+				<lable for='pn'>연락처</lable>
+				<input id='pn' name='pn' type='text' placeholder="010-xxxx-xxxx"/> 
+			</li>
+			
+			<li>
+				<lable for='birthday'>생일</lable>
+				<input type='date' name='birthday'/> 
+			</li>
+		</ol>	
+	</fieldset>
+	
+	
+	
+	<fieldset>
+		<legend>코딩 숙련도(상중하)</legend>
+		<ol>
+			<li>
+				<label for='level'></label>
+				<input type='range' id='level' name='level;' min="1" max="3" />
+			</li>
+		</ol>	
+	</fieldset>
+	
+	<fieldset>
+		
+			<input type='submit' value='제출'>
+		
+	</fieldset>
+</form>
+</body>
+</html>

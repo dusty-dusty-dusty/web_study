@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 핸들러 연결 </title>
+
+<script type="text/javascript">
+
+/* window.onload = windowInit;
+function windowInit(){
+	
+	let b = document.getElementById('btn');
+	
+	b.onclick= btn_click;
+	
+	function btn_click(){
+		alert('이벤트발생3')
+	}
+	
+}
+ */
+ 
+ /* window.onload = windowInit;
+ function windowInit(){
+ 	
+ 	let b = document.getElementById('btn');
+ 	
+ 	b.onclick= function(){
+ 		alert('이벤트발생4')
+ 	};
+ 	
+ } */
+ 
+ 
+ window.onload = function(){
+	let b = document.getElementById('btn');
+ 	
+ 	b.onclick= function(){
+ 		alert('이벤트발생5')
+ 	}
+ };
+ 
+ 
+</script>
+
+</head>
+ <body>
+	<input type='button' value='눌러'  id='btn' />
+ </body>
+</html>

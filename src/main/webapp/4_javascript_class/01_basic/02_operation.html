@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 연산자</title>
+<script type="text/javascript">
+
+//1.  실수형 계산에는 주의 -> 정수형으로 만들고 계산해야해용~
+
+/* document.write( 0.2 * 3 ==0.6 );
+document.write( 0.2 * 3 )
+document.write( 0.2 * 10 * 3 == 0.6 * 10);
+document.write( 0.2 * 3 * 10 == 0.6 * 10); */
+//0.2를 정수로 만들고 진행해야함
+
+//2.==와 === 차이는?
+/* var num = 10;	// number
+var str = '10';	// string */
+/* document.write (typeof num);
+document.write (typeof str); */
+
+/* if (num == str) document.write('[같다]');
+else document.write('[다르다]') */
+
+//자바스크립트에만 있는 문법이래 
+/* if (num === str) document.write('[같다2]');
+else document.write('[다르다2]') */
+
+
+// 3. 기본형과 참조형
+/* var a = 10;
+var b = 10;
+if(a == b) document.write('같다1')
+else document.write('다르다1') //같다가 나올거같ㅇ은데 ;; 얘는 맞음
+
+
+var a = ['java','script'];
+var b = ['java','script'];
+if(a == b) document.write('같다2')
+else document.write('다르다2') //이거도 같다 아 다른게 주소값이 다름 주소로 묶어서 그런거래요;
+
+var a = 'Hello';
+var b = "Hello";
+if (a==b) document.write('같다3');
+else document.write('다르다3'); //다른가;; 저건 주소값이 아니라석같대용;; */
+
+
+// 4. boolean형 (true/false)
+/* document.write( (1== true)+'<br/>' );
+document.write( (0== true)+'<br/>' );
+document.write( (1== false)+'<br/>' );
+document.write( (0== false)+'<br/>' ); */
+//1은 true고 0은 false로 취급
+
+//5.null과 논리연산자(||, &&)의 조합
+/* const num = null;
+const result = num || '숫자를 입력하세요';
+//앞의 값에 null값이 들어와 false, '숫자를 입력하세요'가 true가 되어 result값에 들어감
+document.write (result + '<br/>'); //숫자를 입력하세요
+
+const num2 = 100;
+const result2 = num2 || '숫자를 입력하세요';
+//앞의 값에 100 들어와 true , 뒤의 값이 중심이되어 result2값에 들어감
+//true가 나오면 뒤 값이 true이든 false이든 처음 나온 true값 반환
+document.write (result2 + '<br/>'); //
+
+const num3 = null;
+const result3 = num3 && '입력값입니다';
+//앞의 값이 false면 뒤에 값 안봐도됨
+document.write (result3 + '<br/>'); //null
+
+const num4 = 100;
+const result4 = num4 && '입력값입니다';
+//앞의 값이 true값이니까 뒤를 확인
+document.write (result4 + '<br/>'); //입력값입니다
+
+const num5 = 0;
+const result5 = num5 && '입력값입니다';
+//0이 false 값이라 뒤에 값 안봐도된다는데요 ;;
+document.write (result5 + '<br/>'); //입력값입니다 */
+
+//6.삼항 연산자 요즘 또 많이 쓴다하네요~ 
+var num = '100';
+var result = (( typeof num === 'number' ) ? num : '숫자를 입력하세요');
+document.write(result + '<br/>');
+// '100'이면 숫자를 입력하세요 , 100이면 100이 나온답니다.
+/*이 조건은...
+
+num = '100' 이면 "string"이니까 false
+
+num = 100 이면 "number"니까 true
+
+즉, 값이 같아 보여도 타입이 다르면 다른 거다! */
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

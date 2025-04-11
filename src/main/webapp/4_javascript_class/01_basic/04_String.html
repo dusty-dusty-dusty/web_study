@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> String 객체 </title>
+<script type="text/javascript">		
+	var str = '너의 삶 속에 나의 삶을 넣어 삶을 영위하자';
+	/* document.writeln( str.indexOf('삶') + '<br/>'); //3
+	document.writeln( str.lastIndexOf('삶')+ '<br/>'); //17
+	document.writeln( str.indexOf('삶을') + '<br/>');//11
+	document.writeln( str.length + '<br/>'); //24
+	
+	document.writeln( str.startsWith('삶') + '<br/>'); //삶으로 시작하니?
+ 	document.writeln( str.endsWith('삶') + '<br/>'); //삶으로 끝나니?
+	document.writeln( str.includes('삶') + '<hr/>'); //삶이 들어가니? */
+
+
+	var msg = '자바에서 웹프로젝트까지 열심히 하자!';
+	document.writeln( msg.charAt(3)+ '<br/>'); //서
+	document.writeln( msg.slice( 5, 12 )+ '<br/>'); //5번째 부터 12번째 앞에거 까지 [웹프로젝트까지]
+	document.writeln( msg.substring( 5, 12 )+ '<br/>'); //[웹프로젝트까지]
+	document.writeln( msg.substr(5, 7 ) + '<br/>');//5번째부터 7개를 얻어오래용
+	document.writeln( msg.split(' ')+ '<br/>'); //잘라버리는거래용 공백을
+	document.writeln( msg.concat('화이팅')+ '<br/>'); //뒤에 화이팅을 붙힌거임
+	document.writeln( msg +  '<hr/>');
+	
+	/*
+	var  text = '♡해yo';
+	document.writeln( text.length +  '<br/>');		
+	document.writeln( text.repeat(2) +  '<br/>');
+	document.writeln( text.codePointAt(0) +  '<br/>');	// 9825
+	document.writeln( String.fromCodePoint(9825) +  '<br/>');
+	*/
+	
+	//문자템플릿
+	
+	const myname= '홍길동'
+	const myage = 22;
+	const message = '내 이름은 '+myname+'입니다. 나이는'+myage +'입니다.';
+	document.write(message+'<br/>');
+
+	//역따옴표이름 템플릿
+	const message2 = '내 이름은 ${myname} 입니다. 나이는 ${myage}입니다.';
+	document.write(message+'<br/>');
+   </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

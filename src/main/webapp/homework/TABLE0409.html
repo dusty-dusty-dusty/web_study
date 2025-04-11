@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3행 2열 테이블 </title>
+
+<script type="text/javascript">
+
+window.onload=function(){
+	var items = document.querySelectorAll('tr>td');
+	
+	for(let i=0; i<items.length; i++){
+		items[i].onclick = function(){
+			//alert("ok");
+			alert(this.getAttribute('data-price'));
+			//getAttribute 속성 값 얻어오기
+		}
+	}
+}
+
+</script>
+
+
+<link href='TABLE0409.css'rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	<table border='3px' id='tbl'>
+		<caption>과제</caption>
+
+		<tbody class="abitem">
+			<tr >
+				<td class='first'  data-price='1000'>커피</td>
+				<td data-price='2000'>녹차</td>
+			</tr>
+			
+			<tr >
+				<td class='first'  data-price='1500'>케익</td>
+				<td  data-price='2500'>빵</td>
+			</tr>
+
+			<tr >
+				<td class='first'  data-price='4000'>과자</td>
+				<td data-price='4500'>초코렛</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+		</tfoot>
+	</table>
+
+
+</body>
+</html>

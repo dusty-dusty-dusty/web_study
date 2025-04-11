@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Alert Test </title>
+<script type="text/javascript">
+
+	window.onload = function(){
+		// 1. alert
+		//window.alert('이 페이지는 http://ictedu.atosoft.net 이사감');
+		//alert('이 페이지는 http://ictedu.atosoft.net 이사감');
+		
+		//window.location.href = "http://ictedu.atosoft.net"
+		//location.href = "http://ictedu.atosoft.net"
+		//window.location = "http://ictedu.atosoft.net"
+		
+		// 2. confirm
+		//var res = confirm('이페이지는 이사감 \n이동할거니?');
+		//alert(res); 
+		//if(res) location.href = "http://ictedu.atosoft.net"
+		
+		
+		// 3. prompt : 
+		var site = prompt('원하시는 사이트를 입력해라');
+		location.href=site;
+	}
+
+</script>
+</head>
+<body>
+이 사이트는 조만간 운영하지 않습니다.
+</body>
+</html>
