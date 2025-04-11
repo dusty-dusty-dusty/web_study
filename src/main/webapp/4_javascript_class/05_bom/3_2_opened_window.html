@@ -5,6 +5,18 @@
 <title> 새로 열려진 창 </title>
 <script type="text/javascript">
 
+window.onload = function(){
+	
+	var sel = frm.site;
+	for(let i=0; i<sel.length; i++){//**** let, var안됨
+		sel[i].onclick = function(){
+			//alert(this.value);
+			//*********************
+			opener.location.href = this.value;
+			
+		}
+	}
+}
 
 
 </script>

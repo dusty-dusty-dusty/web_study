@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <script type="text/javascript">
 
+window.onload = function(){
+	
+	var sel = fm.gender;
+	for(let i=0; i<sel.length; i++){//**** let, var안됨
+		sel[i].onclick = function(){
+			//alert(this.value);
+			//********************
+			parent.frm.result.value = this.value;
+		}
+	}
+}
+
+
 </script>
 <title></title>
 </head>

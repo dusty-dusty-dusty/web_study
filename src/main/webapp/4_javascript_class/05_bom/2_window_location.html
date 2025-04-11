@@ -28,6 +28,30 @@
 <title> window 예제 </title>
 <script type="text/javascript">
 
+window.onload= function(){
+	
+	frm.chooseSite.onchange = function(){
+			
+			
+			const popWidth = 480;
+			const popHeight = 400;
+			
+			const left 	= (screen.availWidth - popWidth) / 2;
+			const top	= (screen.availHeight - popHeight) / 2;
+			
+			var url = frm.chooseSite.value;
+			
+			
+			window.open(url, "popup"
+					, `width=${popWidth} height=${popHeight} left=${left} top=${top}`)
+			
+		}
+	}
+	
+
+
+
+
 	
 </script>
 </head>

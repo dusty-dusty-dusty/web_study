@@ -9,7 +9,43 @@
 		1. 선택한 옵션의 값(value)을 얻어온다.
 		2. location 객체의 href 프로퍼티에 url을 지정
 		*/
-
+window.onload= function() {
+			
+	//var sel = document.getElementById('chooseSite');
+	//var sel = document.querySelector('chooseSite');
+	var sel = frm.chooseSite;
+	
+	sel.onchange = function(){
+		/*
+		1. 선택한 옵션의 값(value)을 얻어온다.
+		2. location 객체의 href 프로퍼티에 url을 지정
+		*/
+		
+		/* function test(){		
+			var nextPage = sel.value;
+			window.location.href = nextPage;
+		}
+		//[참고] window.setTimeout(함수, 초); => 몇 초후에 함수 호출 
+		window.setTimeout(test, 1000); */
+		
+		//[참고] window.setTimeout(함수, 초); => 몇 초후에 함수 호출 
+		/* window.setTimeout(function (){		
+			var nextPage = sel.value;
+			window.location.href = nextPage;
+			}, 1000); */
+			
+			
+			//이건 뒤로가기가 없음 ;
+			setTimeout(function (){		
+				var nextPage = sel.value;
+				//location.href = nextPage;
+				location.replace(nextPage);
+			}, 1000);
+			
+		
+		
+	}
+}
 
 </script>
 </head>

@@ -11,9 +11,18 @@
 <body bgcolor="#ddddff">
 	원하는 사이트를 선택하여 주시면 넘어갈걸요?
 	
+	<input type='button' id='btn' value='데이타 전달'>
+	
 	<script type="text/javascript">
 		//3_2_opened_window.html 창을 열기
-
+		var winObj = window.open('3_2_opened_window.html','newWin','width=340 height=250')
+		
+		document.querySelector('#btn').onclick = function(){
+			//오픈한 창의 값을 보내기
+			winObj.frm.temp.value = '본판에서 보낸 데이타';
+			
+		}
+		
 	</script>
 </body>
 </html>

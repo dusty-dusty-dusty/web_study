@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Samsung 대한민국 | 모바일 | TV | IT 가전 </title>
+  <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+
+<script type="text/javascript" src='./js/formCheck.js'></script>
+
+<!-- Bootstrap -->
+<link href="./css/nomalize.css" rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/style_contact.css" rel="stylesheet">
+<link href="./css/animate.css" rel="stylesheet">
+<link href="./css/jquery.fancybox.css" rel="stylesheet">
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar-scroll" data-offset="50">
+	<div class="container-fluid">
+		<div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+				id="navbar-scroll">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-1-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						   <a class="navbar-brand" href="#"><img src="./imgs/samsung_logo.png" alt="samsung_logo"> </a>
+					</div>
+
+					<!-- 네비게이션 메뉴 -->
+					<div
+						class="collapse navbar-collapse navbar-right navbar-1-collapse">
+						<ul class="nav navbar-nav">
+							 <li><a href="index.html"> Home </a></li>  
+                <li><a href="about.html"> About </a></li>  
+                <li><a href="portfolio.html"> New </a></li>  
+                <li><a href="category.html"> Category </a></li>  
+                <li><a href="contact.html"> Membership </a></li> 
+						</ul>
+					</div>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+		</div>
+	</div>
+
+	<div id="contact"></div>
+	<header class="content3">
+		<!-- Contact 시작 -->
+		<div class="container">
+			<h1>
+				<small>Membership</small>
+			</h1>
+			<p>삼성전자에 오신 것을 환영합니다. 회원가입을 통해 다양한 서비스를 이용하실 수 있습니다.</p>
+		</div>
+		<!-- end .container -->
+	</header>
+	<div class="container contact">
+		<h2> 회원가입 </h2>
+		<div class="row">
+			<div class="col-md-7">
+				<form class="form-horizontal" role="form" id="ajax-contact-form"
+					action="#">
+					<div class="form-group">
+						<input type="text" class="form-control required" name="name"
+							pattern="[가-힣]{2,5}" placeholder="이름" title="Name">
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" name="id"
+							placeholder="아이디" title="id">
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" name="passward"
+							placeholder="비밀번호" title="passward">
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" name="passward1"
+							placeholder="비밀번호확인" title="passward1">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="numbers"
+							placeholder="휴대폰" title="numbers">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" class="form-control required" name="email" type='text'
+							placeholder="이메일" title="Email" >
+					</div>
+					<p>
+						<button type="button" class="btn btn-primary btn-lg">가입
+							완료</button>
+					</p>
+					<div class="form-group">
+						<fieldset>
+						<button class="send_btn" type="submit">전 송</button>
+						<button type="reset" class="send_btn">재설정</button>
+						</fieldset>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4  col-md-offset-1 contact_info wp5 delay-05s">
+				<p>
+					<span class="glyphicon glyphicon-home"> </span> 신촌역 2번출구
+					206-602
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-phone"> </span> 문의 +82 10 1111 2222
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-inbox"> </span> <a
+						href="mailto:ugpapa@gmail.com">black@gamil.com </a>
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-copyright-mark"> </span>
+					Studio
+				</p>
+			</div>
+		</div>
+		</div>
+	
+	<!-- contact_form -->
+
+	<footer class="content3">
+		<div class="container">All contents copyright&#169; 2014
+			9pixelstudio.com</div>
+	</footer>
+
+	</div>
+	<!--  fluid container 끝 -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/bootstrap-hover-dropdown.js"></script>
+	<script src="./js/animatescroll.min.js"></script>
+	<script src="./js/simpleparallax.js"></script>
+	<script src="./js/waypoints.min.js"></script>
+	<script src="./js/jquery.fancybox.js"></script>
+	<script>
+		$('.carousel').carousel()
+		$('.carousel2').carousel({
+			interval : 3000
+		})
+
+		/***************** Waypoints ******************/
+		$('.wp1').waypoint(function() {
+			$('.wp1').addClass('animated fadeInLeft');
+		}, {
+			offset : '75%'
+		});
+		$('.wp2').waypoint(function() {
+			$('.wp2').addClass('animated fadeInUp');
+		}, {
+			offset : '75%'
+		});
+		$('.wp3').waypoint(function() {
+			$('.wp3').addClass('animated fadeInDown');
+		}, {
+			offset : '55%'
+		});
+		$('.wp4').waypoint(function() {
+			$('.wp4').addClass('animated fadeInDown');
+		}, {
+			offset : '75%'
+		});
+		$('.wp5').waypoint(function() {
+			$('.wp5').addClass('animated fadeInRight');
+		}, {
+			offset : '75%'
+		});
+		//*  */
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				openEffect : 'none',
+				closeEffect : 'none'
+			});
+		});
+	</script>
+</body>
+</html>

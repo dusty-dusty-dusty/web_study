@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	
+
+</head>
+<body>
+	<form name="form1">
+		<!-- 도시 셀렉트박스 -->
+    	<select id="dosi" name="dosi">
+    		<option value="서울">서울시</option>
+    		<option value="인천">인천</option>
+    	</select>
+    	
+    	<br><br> <!-- 간격 주기용 -->
+    	
+		<!-- 인풋 -->
+		<input type='text' name='result'>
+	</form>
+	
+	
+	<script type="text/javascript">
+	//3_practice_sub.html 창을 열기
+		var winObj = window.open
+		('3_practice_sub.html','newWin','width=340 height=250')
+		document.getElementById('dosi').onchange = function(){
+			
+			winObj.form2.temp.value = this.value;
+			}
+	</script>	
+</body>
+</html>
