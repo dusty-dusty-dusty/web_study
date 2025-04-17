@@ -3,6 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <title> 제이쿼리 이벤트 연습 </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    #txt  {
+      width : 1000px; 
+      height: 500px;        /* 박스 높이 고정 */
+      font-size: 16px;      /* 기본 글자 크기 */
+      line-height: 1.6;     /* 줄 간격 */
+      resize: none;         /* 사용자 리사이즈 막기 (선택) */
+    }
+  </style>
+
+
+
+<script type="text/javascript">
+
+$(function () {
+    $("#btnplus").click(function () {
+      // 현재 폰트 크기 가져오기
+      let fontSize = parseInt($("#txt").css("font-size"));
+
+      // 폰트 크기 4 증가
+      $("#txt").css("font-size", fontSize +4+'px');
+    });
+   //----------------------------------------------------
+    $("#btnminus").click(function () {
+      // 현재 폰트 크기 가져오기
+      let fontSize = parseInt($("#txt").css("font-size"));
+
+      // 폰트 크기 4 증가
+      $("#txt").css("font-size", fontSize -4+'px');
+      });
+  //----------------------------------------------------
+    $('#fontstyle').change(function () {
+        var selectedFont = $(this).val();
+        $('#txt').css('font-family', selectedFont);
+      });
+  
+  });
+  
+  
+</script>
+
 </head>
 <body>
 
@@ -10,8 +53,8 @@
 		<dl>
 				<dt> 글씨크기 </dt>
 				<dd class='fontSize'>
-					<button> + </button>
-					<button> - </button>
+					<button id=btnplus> + </button>
+					<button id=btnminus> - </button>
 				</dd>
 				<dt> 글씨체 </dt>
 				<dd class='fontStyle'>

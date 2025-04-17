@@ -12,6 +12,28 @@
 	.borderBlue { border : 3px dotted blue; }
 </style>
 
+<script type="text/javascript" 
+		src='/WebUI/5_jquery_class/lib/jquery-3.7.1.js'></script>
+		
+<script type="text/javascript">
+
+$(document).ready(function(){
+	//각 종류의 첫번째 요소 선택
+	//$('ul').find('li:first').addClass('bf');
+	//$('ul').find('li:nth-child(2)').addClass('bg');
+	//$('ul').find('li:eq(2)').addClass('border');
+	
+	//음식 중 세번째 요소
+	$('#food').find('li:eq(2)').addClass('borderBlue');
+	//'튀김'을 포함하는 요소 선택
+	$('#food').find('li:contains("튀김")').addClass('bg');
+	//술 종류 중 두번째 요소 선택
+	$('ul:nth-of-type(2)').find('li:eq(1)').addClass('bg');
+});
+
+
+</script>
+
 </head>
 <body>
 		<h1>제이쿼리 시작</h1>

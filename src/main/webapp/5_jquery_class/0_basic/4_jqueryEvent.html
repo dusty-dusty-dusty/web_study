@@ -4,6 +4,66 @@
 <meta charset="UTF-8">
 <title>jquery event</title>
 
+<script type="text/javascript" 
+		src='/WebUI/5_jquery_class/lib/jquery-3.7.1.js'></script>
+		
+<script type="text/javascript">
+$(function(){
+	
+	$('h1').css('curso','pointer');
+	$('h1').click(function(){
+		
+		var n = $('<li/>').text(new Date());
+		$('ul').append(n);
+		
+	})
+	
+	/*
+		$('li') 	: 화면에 <li> 요소
+		$('#li')	: 화면에 <요소 id='li'>
+		$('.li')	: 화면에 <요소 class='li'>
+ 		$('<li/>')	: li 요소의 객체
+	*/
+	
+	
+	
+	
+	/* $('li').click(function(){
+		
+		$('#result').text($(this).text());
+		}) */
+	/*************************************************
+		동적으로 생성된 요소는 기본적인 이벤트가 발생하지 않는다.
+	*/
+	$('ul').on('click','li',function(){
+		$('#result').text($(this).text());
+	})
+	
+	
+	
+		
+		//alert("gd");
+		//alert($(this).text());
+		//$('ul').append($(this).text())
+		/* var n = $(this).text();
+		$('#result').text(n);
+	}); */
+	
+	
+	/* $('li').bind('click',function(){
+		$('#result').text($(this).text());
+	}); */
+	
+		/* $('li').one('click',function(){
+			$('#result').text($(this).text());
+		}); */
+	
+	
+});
+
+
+</script>
+
 <style type="text/css">
 	.bg { background : yellow; }
 	.border { border : 3px dotted red; }

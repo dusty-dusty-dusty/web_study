@@ -19,25 +19,147 @@
 <script type="text/javascript">
 
 $(function(){
+
+	 
+	// [1]---------------------------
+	$('ul > .woman').css({'background':'lightblue'});
+	//$('li.man').css({'background':'lightblue'});
+	$('ul > .man').css({'background':'pink'});
 	
-	//[1]----------------------
-	$('ul > .woman').css({'background' : 'lightblue'});
-	$('ul > .man').css({'background' : 'pink'});
-	
-	
-	//[2]----------------------
+	// [2]---------------
 	var redBox = $('input.inputText');
 	redBox.focus(function(){
-		//redBox.addClass('active'); 전체 빨간 박스
-		$(this).addClass('active'); 
-		//선택부분만
+		$(this).addClass('active');       //this. 는 자바스크립트   j쿼리는 $(this).
 	});
-	// focus <->blur
+
+	// focus <-> blur
 	redBox.blur(function(){
-		$(this).removeClass('active'); 
+		$(this).removeClass('active');       
 	});
 	
-})	
+	// [3]--------------------------
+	/* 
+		
+		자바스크립트 : innerHTML
+		제이쿼리 : text()	/ html()
+		
+		[*]제이쿼리 특징 : setter와 getter 동일하다
+				함수(인자) : setter
+				함수() 	 : getter
+		
+		[*] attr(속성명, 속성값) : setter
+			attr(속성명)		  : getter
+				
+			ex) attr('type','checkbox') => 변경(setter)
+			 	attr('type')			=> 얻어오기(getter)
+			 	
+	 */
+	
+/* 	alert($('#divText').text());// getter
+	$('#divText').text("변경합니다.")
+ */	
+	$('#divText').text('<img src = "images/grim.jpg"  />');
+	$('#divHtml').html('<img src = "images/grim.jpg"  />');
+	$('#divEmpty').empty();
+
+	// 현재 강아지 그림을 클릭하면 고양이 그림으로 변경
+	// <img src = "images.puppy.jpg" ~~> src 속성의 값을 고양이 파일로 변경
+	
+	$('#changeGrim').click(function(){
+		//alert('asdf');
+		//$(this).attr('src','images/cat.jpg');       
+	//	alert($(this).attr('src')); // "images/puppy.jpg"       
+	//	alert($(this).attr('src').replace('puppy','cat'));
+			//"images/puppy.jpg" .
+	$(this).attr('src',	($(this).attr('src').replace('puppy','cat')));
+	});
+	
+	
+	
+	// [4] -----------------------
+	
+	/* 
+		<div>태그사이의 값</div> :  text() / html()
+		<input value = '밸류값'> : val()
+	
+	 */
+	
+	
+	$('#check').click(function(){
+		var name = 	$('#tf').val();
+		var msg = 	$('#ta').val();
+		var juso = $('#sel').val();
+		var doe = $('#sel_m').val();//baeyeol
+		
+		alert("이름 : " + name + "\n"+"메세지 : "+msg+"\n"+"도시 : "+juso+"\n"+"섬 : "+doe);
+	})
+	
+	//'초기화' 버튼이 눌렸을 때
+	
+	
+	$('#init').click(function(){
+		$('#tf').val('이름을 입력하세요');
+		$('#ta').val('오늘도 행복하세요');
+		$('#sel').val('busan'); //'부산' X ---> value 태그에 쓰인 것이 있으면 value값대로써야함
+		$('#sel_m').val(['제주도','seom4']);// value 태그에 값이 없으면 <>내용</> 내용이 value
+	})
+	
+	
+	// [5]----------------------
+	
+	// 태그의 부모/자식 관계
+	//	-부모.append(자식)
+	//	-자식.appendTo(부모)
+	
+	var actor = $('#actor');
+	var tae = $('#tae');
+	var su = $('#su');
+	var bin = $('#bic');
+	
+	actor.append(tae);
+	su.appendTo(actor);
+	
+	actor.append('<div>한배우</div>');
+	
+	$('<div>한배우</div>').appendTo(actor); //객체를 만들어 주고 붙이기 동적으로 만들기 
+	
+	var n = $('<div/>'); // <div></div> //동적으로 태그를 만들고
+	n.text('두배우');	// <div>두배우</div>	//
+	
+	actor.append(n);
+	
+	
+	
+	
+	
+	// [6]----------------------------------
+	$('.data').click(function(){ //왜 반복문을 안쓰는가 -->분명히 배열일 텐데 통채로 클릭이벤트 : for문 돌릿듯이 되게 했다. 
+		alert($(this).text());
+	}); 
+	
+		
+		
+		$('.data').each(function(){//명시적 .each함수 : for문 돌리듯이 하나의 요소마다 실행하는
+			$(this).click(function(){
+				alert($(this).text()); //만약 안된다면
+				//alert(this.innerHTML) // 나오긴 하지만 j쿼리와 JS를 섞어쓰면 X
+			})
+		}) //정석 --> j쿼리가 문제가 생기면 자바스크립트 문법으로 해줘야한다 -> but 섞어쓰지 않도록
+	
+		/* **************************
+			
+			var n = $('#div'); //화면에 <요소 id='div'>
+			var n = $('.div'); //화면에 <요소 class = 'div'>
+			var n = $('div'); //화면에 <div></div>
+			
+			var n = $('<div/>'); //div 새로운객채
+			var n = $('<div></div>'); //div 새로운객채
+		
+		*/
+		
+})
+
+
 </script>
 
 
@@ -69,10 +191,10 @@ $(function(){
 			<option value="incheon">인천</option>
 		</select>
 		<select id="sel_m" multiple="multiple">
-			<option value="seom1">제주도</option>
-			<option value="seom2">울릉도</option>
-			<option value="seom3">독도</option>
-			<option value="seom4">거제도</option>
+			<option >제주도</option>
+			<option >울릉도</option>
+			<option >독도</option>
+			<option >거제도</option>
 		</select><br/>
 		<input type='button' id='check' value='확인'/>
 		<input type='button' id='init' value='초기화'/> 

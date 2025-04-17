@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>this vs $(this) 비교 예제</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .highlight {
+      background-color: gold;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔴 기본 자바스크립트 this</h2>
+  <button id="btn-js">JS this 클릭</button>
+
+  <h2>🔵 jQuery $(this)</h2>
+  <button id="btn-jq">jQuery $(this) 클릭</button>
+
+  <script>
+    // JS 기본 this 사용
+    document.getElementById("btn-js").onclick = function () {
+      this.style.backgroundColor = "lightcoral";
+      this.style.color = "white";
+      this.innerText = "➡ JS 방식 작동 완료!";
+    };
+
+    // jQuery this 사용
+    $("#btn-jq").click(function () {
+      $(this).addClass("highlight").text("➡ jQuery 방식 작동 완료!");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>제이쿼리 이벤트 연습</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    #txt {
+      font-size: 16px;
+      font-family: "돋움", dotum, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div id='wrap'>
+    <dl>
+      <dt>글씨크기</dt>
+      <dd class='fontSize'>
+        <button id="btnBigger"> + </button>
+        <button id="btnSmaller"> - </button>
+      </dd>
+
+      <dt>글씨체</dt>
+      <dd class='fontStyle'>
+        <select id='fontstyle'>
+          <option value='dotum, "돋움", sans-serif'>돋움</option>
+          <option value='gulim, "굴림", sans-serif'>굴림</option>
+          <option value='"Malgun Gothic", "맑은 고딕", sans-serif'>맑은고딕</option>
+          <option value='"궁서", serif'>궁서</option>
+        </select>
+      </dd>
+    </dl>
+  </div>
+
+  <p>
+    <textarea id='txt' rows='20' cols='150'>
+    독도는 우리땅.
+    </textarea>
+  </p>
+
+  <script>
+    $(function() {
+      let fontSize = 16;
+
+      // 글씨 크기 +
+      $('#btnBigger').click(function () {
+        fontSize += 2;
+        $('#txt').css('font-size', fontSize + 'px');
+      });
+
+      // 글씨 크기 -
+      $('#btnSmaller').click(function () {
+        fontSize -= 2;
+        if (fontSize < 10) fontSize = 10; // 최소 크기 제한
+        $('#txt').css('font-size', fontSize + 'px');
+      });
+
+      // 글꼴 변경
+      $('#fontstyle').change(function () {
+        var selectedFont = $(this).val();
+        $('#txt').css('font-family', selectedFont);
+      });
+    });
+  </script>
+
+</body>
+</html>
