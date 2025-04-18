@@ -7,6 +7,19 @@
 <script type="text/javascript"   src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
 
+$(function(){
+	//1. 송신 버튼이 눌렸을때
+	$('#btnSave').click(function(){
+		$.cookie('myemail', $('#txtMail').val(),{ expsires:1})
+		$('#txtMail').val('');
+	})
+	
+	if($.cookie('myemail')){
+		$('#txtMail').val($.cookie('myemail'));
+	}
+})
+
+
 </script>
 </head>
 <body>

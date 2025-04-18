@@ -1,3 +1,21 @@
+$(function(){
+	
+	$('.accordion').accordion({
+		heigtStyle : 'content'
+		, animate : { duration:1000, easing : 'easeInElastic'}
+	});
+
+	$('.accordion > dt').css('cursor', 'pointer');
+})
+
+
+
+
+
+
+
+
+
 // jquery.com  >  위에서 두번째 UI >
 // animate 참조시 http://api.jqueryui.com/easings/
 
