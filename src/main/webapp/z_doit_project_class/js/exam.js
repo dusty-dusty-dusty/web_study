@@ -1,4 +1,4 @@
-/*(1) 오늘 날짜 출력 (10점)
+/*/*(1) 오늘 날짜 출력 (10점)
 (2) 포커스 가면 ‘검색어를 입력하세요’를 안보이고 다시 포커스가 없으면 다시 출력 (10점)
 (3) 탭팬 구현 (20점)
 (4) 이미지슬라이드 구현 (10점)
@@ -33,19 +33,4 @@ $(document).ready(function() {
 	});*/
 
 
-//(2) 포커스 가면 ‘검색어를 입력하세요’를 안보이고 다시 포커스가 없으면 다시 출력 (10점)
-$(function () {
-    var defaultText = '검색어를 입력하세요';
 
-    $('#keyword')
-        .focus(function () {
-            $(this).attr('placeholder', '');  // 포커스 가면 placeholder 제거
-        })
-        .blur(function () {
-            if ($(this).val() === '') {
-                $(this).attr('placeholder', defaultText);  // 다시 출력
-            }
-        });
-});
-	
-})
